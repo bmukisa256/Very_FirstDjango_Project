@@ -14,4 +14,14 @@
 
 </ul>
 
+<ul>
+    {% for note in notes %}
+        <li>
+            <a href="{% url 'notes.detail' note.pk %}">{{ note.title }}</a>
+            <a href="{% url 'notes.update' note.pk %}">Edit</a>
+        </li>
+    {% endfor %}
+</ul>
+
+
 {% endblock %}
